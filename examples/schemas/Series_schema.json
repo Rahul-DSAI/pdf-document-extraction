@@ -1,0 +1,52 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "manufacturerCode": {
+        "type": "string",
+        "description": "Code identifying the manufacturer"
+      },
+      "brandCode": {
+        "type": "string",
+        "description": "Code identifying the brand"
+      },
+      "desc": {
+        "type": "string",
+        "description": "Description of the series"
+      },
+      "seriesCode": {
+        "type": "string",
+        "description": "Unique code identifying the series"
+      },
+      "isActive": {
+        "type": "boolean",
+        "description": "Indicates if the series is currently active"
+      },
+      "features": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "description": "List of main features associated with the series"
+      },
+      "adonFeatures": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "description": "List of additional features/options for the series"
+      }
+    },
+    "required": [
+      "manufacturerCode",
+      "brandCode",
+      "desc",
+      "seriesCode",
+      "isActive",
+      "features",
+      "adonFeatures"
+    ]
+  }
+}

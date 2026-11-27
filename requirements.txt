@@ -1,0 +1,6 @@
+beautifulsoup4
+lxml
+pandas
+marker-pdf
+llama-parse
+nest-asyncio

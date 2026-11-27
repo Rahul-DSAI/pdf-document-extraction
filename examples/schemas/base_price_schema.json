@@ -1,0 +1,67 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "isActive": {
+        "type": "boolean",
+        "description": "Indicates if the price is active"
+      },
+      "seriesCode": {
+        "type": "string",
+        "description": "Code for the series"
+      },
+      "series": {
+        "type": "string",
+        "description": "Name of the series"
+      },
+      "pricePerQuantity": {
+        "type": "array",
+        "description": "Price per quantity",
+        "items": {
+          "type": "object",
+          "properties": {
+            "unit": {
+              "type": "string",
+              "description": "Unit of quantity"
+            },
+            "price": {
+              "type": "number",
+              "description": "Price for the unit"
+            }
+          },
+          "required": [
+            "unit",
+            "price"
+          ]
+        }
+      },
+      "width": {
+        "type": "string",
+        "description": "Width of the product"
+      },
+      "height": {
+        "type": "string",
+        "description": "Height of the product"
+      },
+      "gauge": {
+        "type": "string",
+        "description": "Gauge of the product"
+      },
+      "type": {
+        "type": "string",
+        "description": "Type of the product"
+      }
+    },
+    "required": [
+      "isActive",
+      "seriesCode",
+      "series",
+      "pricePerQuantity",
+      "width",
+      "height",
+      "gauge"
+    ]
+  }
+}

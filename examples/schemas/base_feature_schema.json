@@ -1,0 +1,106 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "isActive": {
+        "type": "boolean",
+        "description": "Indicates whether the feature is active."
+      },
+      "featureCode": {
+        "type": "string",
+        "description": "A unique code representing the feature."
+      },
+      "desc": {
+        "type": "string",
+        "description": "Description of the feature."
+      },
+      "availabilityCriteria": {
+        "type": "array",
+        "description": "Criteria for feature availability",
+        "items": {
+          "type": "object",
+          "properties": {
+            "seriesCode": {
+              "type": "string",
+              "description": "Series code"
+            },
+            "width": {
+              "type": "string",
+              "description": "Width of product"
+            },
+            "height": {
+              "type": "string",
+              "description": "Height of product"
+            },
+            "type": {
+              "type": "string",
+              "description": "type of the product"
+            }
+          },
+          "required": [
+            "seriesCode"
+          ]
+        }
+      },
+      "options": {
+        "type": "array",
+        "description": "Available options for the feature",
+        "items": {
+          "type": "object",
+          "properties": {
+            "optionCode": {
+              "type": "string",
+              "description": "A unique code representing the option."
+            },
+            "desc": {
+              "type": "string",
+              "description": "Description of the option."
+            },
+            "availabilityCriteria": {
+              "type": "array",
+              "description": "Criteria for option availability",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "seriesCode": {
+                    "type": "string",
+                    "description": "Series code"
+                  },
+                  "width": {
+                    "type": "string",
+                    "description": "Width of product"
+                  },
+                  "height": {
+                    "type": "string",
+                    "description": "Height of product"
+                  },
+                  "type": {
+                    "type": "string",
+                    "description": "type of the product"
+                  }
+                },
+                "required": [
+                  "seriesCode"
+                ]
+              }
+            }
+          },
+          "required": [
+            "optionCode",
+            "desc",
+            "availabilityCriteria"
+          ]
+        }
+      }
+    },
+    "required": [
+      "isActive",
+      "featureCode",
+      "desc",
+      "availabilityCriteria",
+      "options"
+    ]
+  }
+}

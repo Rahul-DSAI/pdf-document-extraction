@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="420" viewBox="0 0 1600 420">
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#07172f"/><stop offset="1" stop-color="#123e5b"/></linearGradient>
+  <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#42d6c4"/><stop offset="1" stop-color="#5ba8ff"/></linearGradient>
+  <filter id="glow"><feGaussianBlur stdDeviation="10" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+</defs>
+<rect width="1600" height="420" rx="28" fill="url(#bg)"/>
+<g opacity=".12" stroke="#8bd8ff" fill="none"><path d="M0 330 L420 40 M140 420 L600 0 M940 420 L1400 0 M1200 420 L1600 120"/><circle cx="1350" cy="200" r="150"/><circle cx="1350" cy="200" r="105"/></g>
+<g transform="translate(1120 72)" filter="url(#glow)">
+  <rect x="0" y="0" width="250" height="270" rx="22" fill="#0d2b46" stroke="url(#accent)" stroke-width="4"/>
+  <path d="M42 58 H208 M42 94 H190 M42 130 H205" stroke="#b5eaff" stroke-width="10" stroke-linecap="round"/>
+  <path d="M42 184 H105 M125 184 H208 M42 220 H175" stroke="#43d8c6" stroke-width="10" stroke-linecap="round"/>
+  <path d="M250 135 C300 135 300 220 350 220" fill="none" stroke="url(#accent)" stroke-width="6"/>
+  <circle cx="360" cy="220" r="14" fill="#43d8c6"/>
+</g>
+<text x="100" y="150" font-family="Inter,Arial,sans-serif" font-size="26" letter-spacing="6" fill="#65d9d0">DOCUMENT INTELLIGENCE</text>
+<text x="100" y="235" font-family="Inter,Arial,sans-serif" font-size="64" font-weight="700" fill="#ffffff">PDF Extraction</text>
+<text x="100" y="292" font-family="Inter,Arial,sans-serif" font-size="27" fill="#b9d5e8">Structured tables • JSON • CSV • HTML</text>
+<rect x="100" y="335" width="360" height="7" rx="4" fill="url(#accent)"/>
+</svg>

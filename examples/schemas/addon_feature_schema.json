@@ -1,0 +1,87 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "isActive": {
+        "type": "boolean",
+        "description": "Indicates whether the adon feature is active."
+      },
+      "adonFeatureCode": {
+        "type": "string",
+        "description": "A unique code representing the adon feature."
+      },
+      "desc": {
+        "type": "string",
+        "description": "Description of the adon feature."
+      },
+      "availabilityCriteria": {
+        "type": "array",
+        "description": "Criteria for adon feature availability",
+        "items": {
+          "type": "object",
+          "properties": {
+            "seriesCode": {
+              "type": "string",
+              "description": "Series code"
+            }
+          },
+          "required": [
+            "seriesCode"
+          ]
+        }
+      },
+      "options": {
+        "type": "array",
+        "description": "Available options for the adon feature",
+        "items": {
+          "type": "object",
+          "properties": {
+            "isActive": {
+              "type": "boolean",
+              "description": "Indicates whether the option is active."
+            },
+            "optionCode": {
+              "type": "string",
+              "description": "A unique code representing the option."
+            },
+            "desc": {
+              "type": "string",
+              "description": "Description of the option."
+            },
+            "availabilityCriteria": {
+              "type": "array",
+              "description": "Criteria for option availability",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "seriesCode": {
+                    "type": "string",
+                    "description": "Series code"
+                  }
+                },
+                "required": [
+                  "seriesCode"
+                ]
+              }
+            }
+          },
+          "required": [
+            "isActive",
+            "optionCode",
+            "desc",
+            "availabilityCriteria"
+          ]
+        }
+      }
+    },
+    "required": [
+      "isActive",
+      "adonFeatureCode",
+      "desc",
+      "availabilityCriteria",
+      "options"
+    ]
+  }
+}

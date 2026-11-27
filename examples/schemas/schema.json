@@ -1,0 +1,389 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "product Configuration Schema",
+  "description": "Schema for configuring product options and pricing.",
+  "type": "object",
+  "properties": {
+    "base_features": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "isActive": {
+            "type": "boolean",
+            "description": "Indicates if the feature is active."
+          },
+          "featureCode": {
+            "type": "string",
+            "description": "Unique code for the feature."
+          },
+          "desc": {
+            "type": "string",
+            "description": "Description of the feature."
+          },
+          "availabilityCriteria": {
+            "type": "array",
+            "description": "Criteria for when the feature is available.",
+            "items": {
+              "type": "object",
+              "properties": {
+                "seriesCode": {
+                  "type": "string",
+                  "description": "Series code for availability."
+                },
+                "width": {
+                  "type": "string",
+                  "description": "width of the product"
+                },
+                "height": {
+                  "type": "string",
+                  "description": "height of the product"
+                },
+                "type": {
+                  "type": "string",
+                  "description": "product type"
+                }
+              },
+              "required": [
+                "seriesCode"
+              ]
+            }
+          },
+          "options": {
+            "type": "array",
+            "description": "Available options for the feature.",
+            "items": {
+              "type": "object",
+              "properties": {
+                "optionCode": {
+                  "type": "string",
+                  "description": "Unique code for the option."
+                },
+                "desc": {
+                  "type": "string",
+                  "description": "Description of the option."
+                },
+                "availabilityCriteria": {
+                  "type": "array",
+                  "description": "Criteria for when the option is available.",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "seriesCode": {
+                        "type": "string",
+                        "description": "Series code for availability."
+                      },
+                      "width": {
+                        "type": "string",
+                        "description": "width of the product"
+                      },
+                      "height": {
+                        "type": "string",
+                        "description": "height of the product"
+                      },
+                      "type": {
+                        "type": "string",
+                        "description": "product type"
+                      }
+                    },
+                    "required": [
+                      "seriesCode"
+                    ]
+                  }
+                }
+              },
+              "required": [
+                "optionCode",
+                "desc"
+              ]
+            }
+          }
+        },
+        "required": [
+          "isActive",
+          "featureCode",
+          "desc",
+          "availabilityCriteria",
+          "options"
+        ]
+      }
+    },
+    "addon_features": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "isActive": {
+            "type": "boolean",
+            "description": "Indicates if the addon feature is active."
+          },
+          "adonFeatureCode": {
+            "type": "string",
+            "description": "Unique code for the addon feature."
+          },
+          "desc": {
+            "type": "string",
+            "description": "Description of the addon feature."
+          },
+          "availabilityCriteria": {
+            "type": "array",
+            "description": "Criteria for when the addon feature is available.",
+            "items": {
+              "type": "object",
+              "properties": {
+                "seriesCode": {
+                  "type": "string",
+                  "description": "Series code for availability."
+                }
+              },
+              "required": [
+                "seriesCode"
+              ]
+            }
+          },
+          "options": {
+            "type": "array",
+            "description": "Available options for the addon feature.",
+            "items": {
+              "type": "object",
+              "properties": {
+                "isActive": {
+                  "type": "boolean",
+                  "description": "Indicates if the option is active"
+                },
+                "optionCode": {
+                  "type": "string",
+                  "description": "Unique code for the option."
+                },
+                "desc": {
+                  "type": "string",
+                  "description": "Description of the option."
+                },
+                "availabilityCriteria": {
+                  "type": "array",
+                  "description": "Criteria for when the option is available.",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "seriesCode": {
+                        "type": "string",
+                        "description": "Series code for availability."
+                      }
+                    },
+                    "required": [
+                      "seriesCode"
+                    ]
+                  }
+                }
+              },
+              "required": [
+                "isActive",
+                "optionCode",
+                "desc"
+              ]
+            }
+          }
+        },
+        "required": [
+          "isActive",
+          "adonFeatureCode",
+          "desc",
+          "availabilityCriteria",
+          "options"
+        ]
+      }
+    },
+    "addon_prices": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "seriesCode": {
+            "type": "string",
+            "description": "Code for the product series."
+          },
+          "series": {
+            "type": "string",
+            "description": "Name of the product series."
+          },
+          "isActive": {
+            "type": "boolean",
+            "description": "Indicates if the price is active"
+          },
+          "Cores": {
+            "type": "string",
+            "description": "Core type."
+          },
+          "Hinge Hardware": {
+            "type": "string",
+            "description": "Hinge hardware option"
+          },
+          "Panic Preps": {
+            "type": "string",
+            "description": "panic preps option"
+          },
+          "Lock Preps": {
+            "type": "string",
+            "description": "lock preps options"
+          },
+          "Strike and Flush Bolt Preps": {
+            "type": "string",
+            "description": "Strike and flush bolt preps options"
+          },
+          "Closers": {
+            "type": "string",
+            "description": "closer option"
+          },
+          "Top and Bottom Preps & Caps": {
+            "type": "string",
+            "description": "Top and bottom preps option"
+          },
+          "Door Edge Preps": {
+            "type": "string",
+            "description": "product edge preps options"
+          },
+          "Lite Cutouts": {
+            "type": "string",
+            "description": "Lite cutouts options"
+          },
+          "Lite Kits Installed": {
+            "type": "string",
+            "description": "Lite kits installed options"
+          },
+          "Lite Kit Options": {
+            "type": "string",
+            "description": "lite kit options"
+          },
+          "Material (Diamond Series)": {
+            "type": "string",
+            "description": "Material options for diamond series"
+          },
+          "Material (Diamond Plus Series)": {
+            "type": "string",
+            "description": "Material options for diamond plus series"
+          },
+          "Material (TRR Series)": {
+            "type": "string",
+            "description": "Material options for TRR series"
+          },
+          "Dutch Doors": {
+            "type": "string",
+            "description": "Dutch product options"
+          },
+          "Double Acting Doors": {
+            "type": "string",
+            "description": "Double acting product options"
+          },
+          "Miscellaneous": {
+            "type": "string",
+            "description": "Miscellaneous product options"
+          },
+          "description": {
+            "type": "string",
+            "description": "Description of the addon price."
+          },
+          "pricePerQuantity": {
+            "type": "array",
+            "description": "Pricing per quantity.",
+            "items": {
+              "type": "object",
+              "properties": {
+                "unit": {
+                  "type": "string",
+                  "description": "Unit of measure."
+                },
+                "price": {
+                  "type": "number",
+                  "description": "Price for the unit."
+                }
+              },
+              "required": [
+                "unit",
+                "price"
+              ]
+            }
+          }
+        },
+        "required": [
+          "seriesCode",
+          "series",
+          "isActive",
+          "description",
+          "pricePerQuantity"
+        ]
+      }
+    },
+    "base_prices": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "isActive": {
+            "type": "boolean",
+            "description": "Indicates if the base price is active"
+          },
+          "seriesCode": {
+            "type": "string",
+            "description": "Code for the product series."
+          },
+          "series": {
+            "type": "string",
+            "description": "Name of the product series."
+          },
+          "pricePerQuantity": {
+            "type": "array",
+            "description": "Pricing per quantity.",
+            "items": {
+              "type": "object",
+              "properties": {
+                "unit": {
+                  "type": "string",
+                  "description": "Unit of measure."
+                },
+                "price": {
+                  "type": "number",
+                  "description": "Price for the unit."
+                }
+              },
+              "required": [
+                "unit",
+                "price"
+              ]
+            }
+          },
+          "width": {
+            "type": "string",
+            "description": "width of the product"
+          },
+          "height": {
+            "type": "string",
+            "description": "height of the product"
+          },
+          "gauge": {
+            "type": "string",
+            "description": "gauge of the product"
+          },
+          "type": {
+            "type": "string",
+            "description": "type of the product"
+          }
+        },
+        "required": [
+          "isActive",
+          "seriesCode",
+          "series",
+          "pricePerQuantity",
+          "width",
+          "height",
+          "gauge"
+        ]
+      }
+    }
+  },
+  "required": [
+    "base_features",
+    "addon_features",
+    "addon_prices",
+    "base_prices"
+  ]
+}

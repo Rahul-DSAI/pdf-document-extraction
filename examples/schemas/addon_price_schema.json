@@ -1,0 +1,208 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "seriesCode": {
+        "type": "string",
+        "description": "Code for the series"
+      },
+      "series": {
+        "type": "string",
+        "description": "Name of the series"
+      },
+      "isActive": {
+        "type": "boolean",
+        "description": "Indicates if the price is active"
+      },
+      "Cores": {
+        "type": "string",
+        "description": "Cores of the product"
+      },
+      "Hinge Hardware": {
+        "type": "string",
+        "description": "Hinge Hardware of the product"
+      },
+      "Panic Preps": {
+        "type": "string",
+        "description": "Panic Preps of the product"
+      },
+      "Lock Preps": {
+        "type": "string",
+        "description": "Lock Preps of the product"
+      },
+      "Strike and Flush Bolt Preps": {
+        "type": "string",
+        "description": "Strike and Flush Bolt Preps"
+      },
+      "Closers": {
+        "type": "string",
+        "description": "Closers of the product"
+      },
+      "Top and Bottom Preps & Caps": {
+        "type": "string",
+        "description": "Top and Bottom Preps & Caps"
+      },
+      "Door Edge Preps": {
+        "type": "string",
+        "description": "product Edge Preps"
+      },
+      "Lite Cutouts": {
+        "type": "string",
+        "description": "Lite Cutouts"
+      },
+      "Lite Kits Installed": {
+        "type": "string",
+        "description": "Lite Kits Installed"
+      },
+      "Lite Kit Options": {
+        "type": "string",
+        "description": "Lite Kit Options"
+      },
+      "Material (Diamond Series)": {
+        "type": "string",
+        "description": "Material (Diamond Series)"
+      },
+      "Material (Diamond Plus Series)": {
+        "type": "string",
+        "description": "Material (Diamond Plus Series)"
+      },
+      "Material (TRR Series)": {
+        "type": "string",
+        "description": "Material (TRR Series)"
+      },
+      "Dutch Doors": {
+        "type": "string",
+        "description": "Dutch products"
+      },
+      "Double Acting Doors": {
+        "type": "string",
+        "description": "Double Acting products"
+      },
+      "Miscellaneous": {
+        "type": "string",
+        "description": "Miscellaneous"
+      },
+      "description": {
+        "type": "string",
+        "description": "Description of the feature"
+      },
+      "pricePerQuantity": {
+        "type": "array",
+        "description": "Price per quantity",
+        "items": {
+          "type": "object",
+          "properties": {
+            "unit": {
+              "type": "string",
+              "description": "Unit of quantity"
+            },
+            "price": {
+              "type": "number",
+              "description": "Price for the unit"
+            }
+          },
+          "required": [
+            "unit",
+            "price"
+          ]
+        }
+      }
+    },
+    "required": [
+      "seriesCode",
+      "series",
+      "isActive",
+      "description",
+      "pricePerQuantity"
+    ],
+    "oneOf": [
+      {
+        "required": [
+          "Cores"
+        ]
+      },
+      {
+        "required": [
+          "Hinge Hardware"
+        ]
+      },
+      {
+        "required": [
+          "Panic Preps"
+        ]
+      },
+      {
+        "required": [
+          "Lock Preps"
+        ]
+      },
+      {
+        "required": [
+          "Strike and Flush Bolt Preps"
+        ]
+      },
+      {
+        "required": [
+          "Closers"
+        ]
+      },
+      {
+        "required": [
+          "Top and Bottom Preps & Caps"
+        ]
+      },
+      {
+        "required": [
+          "Door Edge Preps"
+        ]
+      },
+      {
+        "required": [
+          "Lite Cutouts"
+        ]
+      },
+      {
+        "required": [
+          "Lite Kits Installed"
+        ]
+      },
+      {
+        "required": [
+          "Lite Kit Options"
+        ]
+      },
+      {
+        "required": [
+          "Material (Diamond Series)"
+        ]
+      },
+      {
+        "required": [
+          "Material (Diamond Plus Series)"
+        ]
+      },
+      {
+        "required": [
+          "Material (TRR Series)"
+        ]
+      },
+      {
+        "required": [
+          "Dutch Doors"
+        ]
+      },
+      {
+        "required": [
+          "Double Acting Doors"
+        ]
+      },
+      {
+        "required": [
+          "Miscellaneous"
+        ]
+      }
+    ]
+  }
+}
