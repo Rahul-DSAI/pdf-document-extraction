@@ -190,4 +190,4 @@ The `examples/schemas/` directory contains genericized schema structures illustr
 
 ## License
 
-Add a license only after confirming you have permission to publish the source code and included assets.
+Open-Source
